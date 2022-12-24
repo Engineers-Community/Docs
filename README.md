@@ -7,8 +7,26 @@ To start the electron app
 ### `npm run electron`
 
 <br/>
-Code responsible to run the electron and react together
-https://github.com/Anmol-Dhiman/Design-Project/blob/e67dbe099869e18b0059b1600d748d0038c0cf01/frontend/public/main.js#L7-L22
+
+```javascript
+//Code responsible to run the electron and react together
+function createWindow() {
+  const main = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true,
+    },
+  });
+
+  main.loadURL(
+    isDev
+      ? "http://localhost:3000"
+      : `file://${path.join(__dirname, "../build/index.html")}`
+  );
+}
+```
 
 ```javascript
 //custom scripts to run and build electron app
