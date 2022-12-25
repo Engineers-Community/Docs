@@ -38,4 +38,4 @@ function createWindow() {
 
 Extension to install
 <br/>
-![TODO-Highlight](vscode:extension/wayou.vscode-todo-highlight)
+<a href="vscode:extension/wayou.vscode-todo-highlight" target="blank"><p>TODO-Highlight</p></a>
